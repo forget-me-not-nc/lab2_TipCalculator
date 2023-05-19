@@ -11,11 +11,12 @@
     <EditText
         android:id="@+id/cost_of_service"
         android:layout_width="160dp"
-        android:layout_height="wrap_content"
-        android:hint="Cost of service"
+        android:layout_height="48dp"
+        android:hint="@string/cost_of_service"
         android:inputType="numberDecimal"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/service_question"
@@ -37,26 +38,26 @@
         <RadioButton
             android:id="@+id/option_none"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="@string/none" />
 
         <RadioButton
             android:id="@+id/option_ten_percent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="@string/good_service" />
 
         <RadioButton
             android:id="@+id/option_fifteen_percent"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:text="@string/amazing_service" />
     </RadioGroup>
 
     <Switch
         android:id="@+id/round_up_switch"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="@string/round_up_tip"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tip_options"
@@ -65,10 +66,11 @@
 
     <Button
         android:id="@+id/calculate_button"
-        android:text="@string/calculate"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:background="@color/purple_200"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/calculate"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/round_up_switch" />
@@ -77,8 +79,11 @@
         android:id="@+id/tip_result"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:textFontWeight="600"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/calculate_button"
-        tools:text="Tip Amount: $0"/>
+        tools:text="Tip Amount: $0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
